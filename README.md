@@ -12,3 +12,5 @@ Derived from the base branch of:
 https://github.com/testdrivenio/fastapi-sqlmodel-alembic/tree/base
 
 
+## Notes
+1. You may need to install uvicorn - sudo apt install uvicorn
