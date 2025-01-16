@@ -1,4 +1,4 @@
-from fastapi import FastAPI
+from fastapi import Depends, FastAPI
 from sqlmodel import select
 from sqlmodel import Session
 
