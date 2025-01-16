@@ -1,7 +1,7 @@
 from fastapi import Depends, FastAPI
 from sqlmodel import select
-from sqlmodel import Session, AsyncSession
-
+from sqlmodel import Session
+from sqlalchemy.ext.asyncio import AsyncSession
 from app.db import init_db, get_session
 from app.models import Song, SongCreate
 
