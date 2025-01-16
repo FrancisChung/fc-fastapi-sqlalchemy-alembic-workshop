@@ -7,9 +7,9 @@ from app.models import Song, SongCreate
 
 app = FastAPI()
 
-@app.on_event("startup")
-def on_startup():
-    init_db()
+# @app.on_event("startup")
+# def on_startup():
+#     init_db()
 
 @app.get("/ping")
 async def pong():
