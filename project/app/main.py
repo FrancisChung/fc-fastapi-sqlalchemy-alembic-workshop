@@ -6,7 +6,7 @@ from app.models import Song
 app = FastAPI()
 
 @app.on_event("startup")
-async def on_startup():
+def on_startup():
     init_db()
 
 @app.get("/ping")
