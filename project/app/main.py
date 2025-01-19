@@ -16,7 +16,7 @@ async def pong():
     return {"ping": "pong!"}
 
 @app.get("/songs", response_model=list[Song])
-def get_songs(session: AsyncSession = Depends(get_session)):
+async def get_songs(session: AsyncSession = Depends(get_session)):
     result = session.execute(select(Song))
     songs = result.scalars().all()
     return [Song(name=song.name, artist=song.artist, year=song.year, id=song.id) for song in songs]
